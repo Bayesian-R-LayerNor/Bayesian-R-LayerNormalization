@@ -86,9 +86,9 @@ Cite Our Work
 ```
 Paper
 
-    📄 Full Paper
+ 📄 Full Paper
 
-    📊 Supplementary Materials
+ 📊 Supplementary Materials
 
 📈 Experiments Reproducibility
 
@@ -118,21 +118,21 @@ python -m pytest tests/test_layers.py -v
 ```
 📧 Contact
 
-    Author: Mohsen Mostafa
+Author: Mohsen Mostafa
 
-    Email: mohsen.mostafa.ai@outlook.com
+Email: mohsen.mostafa.ai@outlook.com
 
-    GitHub: @MohsenMostafa1
+GitHub: @MohsenMostafa1
 
-    Twitter: @Mohsen_ElMahdy
+Twitter: @Mohsen_ElMahdy
 
 🙏 Acknowledgments
 
-    Google Colab for providing GPU resources
+Google Colab for providing GPU resources
 
-    PyTorch team for excellent deep learning framework
+PyTorch team for excellent deep learning framework
 
-    CIFAR-10-C dataset creators
+CIFAR-10-C dataset creators
 
-    All contributors and users
+All contributors and users
 

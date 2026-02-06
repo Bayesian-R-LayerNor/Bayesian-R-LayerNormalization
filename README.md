@@ -61,3 +61,10 @@ model = nn.Sequential(
 x = torch.randn(32, 3, 32, 32)
 output, uncertainty = model(x, return_uncertainty=True)
 ```
+🎯 Key Features
+1. Bayesian Uncertainty
+```bash
+# Get uncertainty estimates
+output, uncertainty = bayesian_norm(x, return_uncertainty=True)
+print(f"Prediction uncertainty: {uncertainty.mean():.4f}")
+```

@@ -36,7 +36,8 @@ Official implementation of **Bayesian R-LayerNorm**: A theoretically grounded no
 pip install bayesian-rlayernorm
 
 # Or install from source
-git clone https://github.com/Bayesian-R-LayerNor/Bayesian-R-LayerNormalizatione/bayesian-r-layernorm.git
+git clone https://github.com/Bayesian-R-LayerNor/Bayesian-R-LayerNormalizatione.git
+
 cd bayesian-r-layernorm
 pip install -e .
 ```

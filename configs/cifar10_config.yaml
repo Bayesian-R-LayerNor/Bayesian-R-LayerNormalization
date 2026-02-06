@@ -1,0 +1,59 @@
+# CIFAR-10 Experiment Configuration
+experiment:
+  name: "bayesian_rlayernorm_cifar10"
+  seed: 42
+  device: "cuda"
+  num_workers: 4
+  
+dataset:
+  name: "CIFAR10-C"
+  root: "./data"
+  corruption_types: ["gaussian", "shot_noise", "blur", "contrast"]
+  severity: 3
+  train_samples_per_type: 1000
+  test_samples_per_type: 500
+  batch_size: 32
+  num_workers: 2
+  
+model:
+  type: "EfficientCNN"
+  norm_type: "bayesian_r_layer"  # Options: layer, r_layer, bayesian_r_layer
+  num_classes: 10
+  use_tanh: true
+  
+training:
+  num_epochs: 10
+  learning_rate: 0.001
+  weight_decay: 1e-4
+  optimizer: "adam"
+  scheduler: "reduce_on_plateau"
+  patience: 5
+  min_lr: 1e-6
+  gradient_accumulation: 1
+  mixed_precision: true
+  
+loss:
+  type: "cross_entropy"
+  
+regularization:
+  lambda_init: 0.01
+  alpha: 1.0
+  
+evaluation:
+  metrics: ["accuracy", "precision", "recall", "f1"]
+  save_predictions: true
+  
+logging:
+  wandb: false
+  tensorboard: true
+  save_dir: "./experiments/results"
+  save_frequency: 5
+  
+checkpoint:
+  save_best: true
+  save_last: true
+  save_frequency: 5
+  
+cloud:
+  colab_compatible: true
+  memory_management: true

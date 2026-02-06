@@ -68,3 +68,71 @@ output, uncertainty = model(x, return_uncertainty=True)
 output, uncertainty = bayesian_norm(x, return_uncertainty=True)
 print(f"Prediction uncertainty: {uncertainty.mean():.4f}")
 ```
+2. Noise Adaptation
+```bash
+# λ parameter controls noise sensitivity
+bayesian_norm = BayesianRLayerNorm(64, lambda_init=0.01)
+# λ automatically adjusts during training
+```
+🔬 Research
+Cite Our Work
+```bash
+@article{mostafa2026bayesian,
+  title={Bayesian R-LayerNorm: A Theoretical Framework for Uncertainty-Aware Robust Normalization},
+  author={Mostafa, Mohsen},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2026}
+}
+```
+Paper
+
+    📄 Full Paper
+
+    📊 Supplementary Materials
+
+📈 Experiments Reproducibility
+
+All experiments can be reproduced using:
+```bash
+# Train on CIFAR-10-C
+python scripts/train.py --config configs/cifar10_config.yaml
+
+# Generate paper figures
+python scripts/generate_paper_figures.py
+
+# Run ablation studies
+python scripts/train.py --config configs/ablation_study.yaml
+```
+🛠️ Development
+Setup Development Environment
+```bash
+git clone https://github.com/Bayesian-R-LayerNor/Bayesian-R-LayerNormalizatione/bayesian-r-layernorm.git
+cd bayesian-r-layernorm
+pip install -e ".[dev]"
+pre-commit install
+```
+Run Tests
+```bash
+pytest tests/ -v
+python -m pytest tests/test_layers.py -v
+```
+📧 Contact
+
+    Author: Mohsen Mostafa
+
+    Email: mohsen.mostafa.ai@outlook.com
+
+    GitHub: @MohsenMostafa1
+
+    Twitter: @Mohsen_ElMahdy
+
+🙏 Acknowledgments
+
+    Google Colab for providing GPU resources
+
+    PyTorch team for excellent deep learning framework
+
+    CIFAR-10-C dataset creators
+
+    All contributors and users
+

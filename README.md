@@ -39,7 +39,7 @@ pip install bayesian-rlayernorm
 git clone https://github.com/Bayesian-R-LayerNor/Bayesian-R-LayerNormalizatione/bayesian-r-layernorm.git
 cd bayesian-r-layernorm
 pip install -e .
-
+```
 
 ```bash
 import torch
@@ -59,5 +59,5 @@ model = nn.Sequential(
 
 # Forward pass with uncertainty
 x = torch.randn(32, 3, 32, 32)
-output, uncertainty = model(x, return_uncertainty=True).
-
+output, uncertainty = model(x, return_uncertainty=True)
+```

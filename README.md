@@ -36,7 +36,7 @@ Official implementation of **Bayesian R-LayerNorm**: A theoretically grounded no
 pip install bayesian-rlayernorm
 
 # Or install from source
-git clone https://github.com/Bayesian-R-LayerNor/Bayesian-R-LayerNormalizatione.git
+git clone https://github.com/Bayesian-R-LayerNor/Bayesian-R-LayerNormalization.git
 
 cd bayesian-r-layernorm
 pip install -e .
@@ -107,7 +107,7 @@ python scripts/train.py --config configs/ablation_study.yaml
 🛠️ Development
 Setup Development Environment
 ```bash
-git clone https://github.com/Bayesian-R-LayerNor/Bayesian-R-LayerNormalizatione/bayesian-r-layernorm.git
+git clone https://github.com/Bayesian-R-LayerNor/Bayesian-R-LayerNormalization.git
 cd bayesian-r-layernorm
 pip install -e ".[dev]"
 pre-commit install

@@ -18,14 +18,16 @@ Official implementation of **Bayesian R-LayerNorm**: A theoretically grounded no
 - **Minimal Overhead**: Only ∼10% computational increase
 - **Cloud-Ready**: Tested on Google Colab with variable GPU allocation
 
+Accuracy Comparison on CIFAR‑10‑C (severity 3)
+
 ## 📊 Performance
 
-| Noise Type | LayerNorm | R-LayerNorm | Bayesian R-LayerNorm |
-|------------|-----------|-------------|----------------------|
-| Gaussian   | 25.80%    | 27.80%      | **31.00%**           |
-| Shot Noise | 28.80%    | **32.40%**  | 30.60%               |
-| Blur       | 31.40%    | 32.00%      | **34.40%**           |
-| Contrast   | **32.80%**| 33.60%      | 32.00%               |
+| Noise Type |  LayerNorm  | R-LayerNorm | Bayesian R-LayerNorm |
+|------------|-----------  |-------------|----------------------|
+| Gaussian   |62.45 ± 0.58 |62.80 ± 0.51 | 62.98 ± 0.58         |
+| Shot Noise |62.97 ± 0.66 |63.16 ± 0.51 | 63.71 ± 0.33         |
+| Blur       |64.22 ± 0.83 |64.07 ± 0.58 | 64.51 ± 0.24         |
+| Contrast   |64.45 ± 1.06 |64.71 ± 0.36 | 64.86 ± 0.07         |
 
 ## 🚀 Quick Start
 
